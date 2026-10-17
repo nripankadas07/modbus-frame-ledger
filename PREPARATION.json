@@ -1,0 +1,72 @@
+{
+  "project": "modbus-frame-ledger",
+  "observed": "2026-10-17T06:27:32.386819+00:00",
+  "platform": "linux",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "checks": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "-q",
+        "test_behavior"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "----------------------------------------------------------------------\nRan 18 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "."
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--wheel-dir",
+        "dist",
+        "."
+      ],
+      "exit": 0,
+      "stdout": "Processing ./.\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: modbus-frame-ledger\n  Building wheel for modbus-frame-ledger (pyproject.toml): started\n  Building wheel for modbus-frame-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for modbus-frame-ledger: filename=modbus_frame_ledger-0.1.0-py3-none-any.whl size=5307 sha256=be08d1317a13f63b3fa4bb57864f1e1712fc6d927d79556bd38309b764bab099\n  Stored in directory: /tmp/pip-ephem-wheel-cache-urcxxcuq/wheels/9f/58/59/a9acfa0b8e126cc71149531f7795888f32c520d38553869097\nSuccessfully built modbus-frame-ledger\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/gh17-modbus-frame-ledger/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct17/modbus-frame-ledger/dist/modbus_frame_ledger-0.1.0-py3-none-any.whl"
+      ],
+      "exit": 0,
+      "stdout": "Processing ./dist/modbus_frame_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: modbus-frame-ledger\nSuccessfully installed modbus-frame-ledger-0.1.0\n",
+      "stderr": "\n[notice] A new release of pip is available: 25.0.1 -> 26.2.1\n[notice] To update, run: /tmp/gh17-modbus-frame-ledger/bin/python -m pip install --upgrade pip\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "verify_installed.py",
+        "/tmp/gh17-modbus-frame-ledger/bin/python"
+      ],
+      "exit": 0,
+      "stdout": "{\"installed_command\": \"modbus-frame-ledger\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_dependencies": [],
+  "remote_ci": "NOT_YET_PUBLISHED"
+}

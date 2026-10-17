@@ -1,0 +1,31 @@
+{
+  "repo": "modbus-frame-ledger",
+  "module": "modbus_frame_ledger",
+  "units": 18,
+  "capability": "Decode one captured Modbus RTU register response against an explicit typed CSV map.",
+  "user": "Controls engineers reviewing an offline serial capture with a device register map.",
+  "pain": "A CRC-valid byte sequence still needs explicit address context, byte order, scale and coverage evidence.",
+  "query": "modbus library",
+  "leader": "stephane/libmodbus",
+  "comparables": [
+    "stephane/libmodbus",
+    "pymodbus-dev/pymodbus",
+    "gavinying/modpoll"
+  ],
+  "quick": "modbus-frame-ledger example.hex example.csv --start 0",
+  "expected": "Exit 0, with temperature -10, status 0 and pressure 12.5. All four captured registers are covered.",
+  "contract": "ASCII hexadecimal RTU response, expected unit 1\u2013247 and function 3 or 4, and mandatory zero-based --start supplied from the request. The response does not carry its start address: context is caller asserted. Validate length, even byte count and CRC16/MODBUS; CRC is not authentication. CSV columns exactly name,address,type,order,scale,offset. u16/i16 use AB or BA; u32/i32/f32 use ABCD/BADC/CDAB/DCBA. Byte-order labels describe wire order relative to canonical ABCD. Scale and offset use exact decimal arithmetic; finite binary32 values retain their exact binary value before scaling.",
+  "limits": "One frame of 5\u2013256 bytes and at most 125 registers; CSV 64 KiB and 125 rows. No overlapping mapped spans, serial ports, TCP, polling, device writes, request capture pairing, authentication or device-specific register semantics. Exceptions, unmapped words, map rows outside the response and nonfinite floats produce valid exit-1 evidence. Exact numeric representation is not a claim about sensor measurement precision.",
+  "acceptance": "Verify known CRC vectors, all byte orders, signed values, binary32 scaling, complete map coverage, CRC failure and valid exception/nonfinite/out-of-range findings.",
+  "notes": "libmodbus and Pymodbus provide full client/server protocol implementations. Modpoll already supports CSV-based device configuration. The broad modbus query also returned telemetry and energy platforms; these are broader integrations, while the focused modbus library query placed libmodbus first. No capability-absence claim or device reliability comparison is made.",
+  "alternatives": "Use libmodbus/Pymodbus protocol code or Modpoll with appropriate device configuration.",
+  "overlap": "No existing owned project decodes RTU response frames or typed Modbus register maps. General CSV validation and packet text tools do not provide this protocol contract.",
+  "reference": "stephane/libmodbus",
+  "topics": [
+    "modbus",
+    "rtu",
+    "industrial-automation",
+    "python",
+    "protocol-analysis"
+  ]
+}

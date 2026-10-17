@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modbus-frame-ledger"
+version = "0.1.0"
+description = "Decode one captured Modbus RTU register response against an explicit typed CSV map."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+modbus-frame-ledger = "modbus_frame_ledger:main"
+
+[tool.setuptools]
+py-modules = ["modbus_frame_ledger"]
