@@ -1,0 +1,170 @@
+{
+  "comparables": [
+    {
+      "full": "stephane/libmodbus",
+      "url": "https://github.com/stephane/libmodbus",
+      "stars": 4268,
+      "default_branch": "master",
+      "pushed_at": "2026-07-02T10:16:05Z",
+      "updated_at": "2026-10-16T13:22:34Z",
+      "archived": false,
+      "license": "LGPL-2.1",
+      "description": "A Modbus library for Linux, Mac OS, FreeBSD and Windows",
+      "observed": "2026-10-17T06:09:54.274Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "479da4c63dbc41d4c0cc6a5bc7541a884b1e6dc4"
+      },
+      "issues": [
+        {
+          "number": 883,
+          "title": "modbus_reply() accepts Write Multiple Coils with Byte Count larger than ceil(Quantity/8)",
+          "url": "https://github.com/stephane/libmodbus/issues/883",
+          "pull_request": false
+        },
+        {
+          "number": 882,
+          "title": "_modbus_receive_msg: use a deadline for the receive timeout",
+          "url": "https://github.com/stephane/libmodbus/pull/882",
+          "pull_request": true
+        },
+        {
+          "number": 881,
+          "title": "Frame Modbus TCP messages by their MBAP length",
+          "url": "https://github.com/stephane/libmodbus/pull/881",
+          "pull_request": true
+        },
+        {
+          "number": 880,
+          "title": "modbus_proxy() sends responses on the RTU bus for broadcast requests",
+          "url": "https://github.com/stephane/libmodbus/issues/880",
+          "pull_request": false
+        },
+        {
+          "number": 879,
+          "title": "modbus: export the libmodbus_version_* variables from the DLL",
+          "url": "https://github.com/stephane/libmodbus/pull/879",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "pymodbus-dev/pymodbus",
+      "url": "https://github.com/pymodbus-dev/pymodbus",
+      "stars": 2782,
+      "default_branch": "dev",
+      "pushed_at": "2026-10-16T13:01:44Z",
+      "updated_at": "2026-10-16T13:22:33Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "A full modbus protocol written in python",
+      "observed": "2026-10-17T06:09:54.342Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "ac690de7494b229a77167fdc543ae8a8c5d4d610"
+      },
+      "issues": [],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "gavinying/modpoll",
+      "url": "https://github.com/gavinying/modpoll",
+      "stars": 154,
+      "default_branch": "main",
+      "pushed_at": "2026-08-19T02:49:16Z",
+      "updated_at": "2026-10-16T19:15:42Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "A New Command-line Tool for Modbus and MQTT",
+      "observed": "2026-10-17T06:09:54.307Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "58eeac6782098067639ea0eb3d4bd8d61676132c"
+      },
+      "issues": [
+        {
+          "number": 106,
+          "title": "chore(main): release 1.6.1",
+          "url": "https://github.com/gavinying/modpoll/pull/106",
+          "pull_request": true
+        },
+        {
+          "number": 102,
+          "title": "Many warnings when using modpoll",
+          "url": "https://github.com/gavinying/modpoll/issues/102",
+          "pull_request": false
+        },
+        {
+          "number": 100,
+          "title": "How to automatically create a CSV file",
+          "url": "https://github.com/gavinying/modpoll/issues/100",
+          "pull_request": false
+        },
+        {
+          "number": 82,
+          "title": "Can't get modpoll to run in a Compose Setup",
+          "url": "https://github.com/gavinying/modpoll/issues/82",
+          "pull_request": false
+        },
+        {
+          "number": 71,
+          "title": "Multiple devices?",
+          "url": "https://github.com/gavinying/modpoll/issues/71",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    }
+  ],
+  "code_references": [
+    {
+      "repo": "stephane/libmodbus",
+      "sha": "87e08874e6c536fe7191d578294ee90a7441d386",
+      "url": "https://github.com/stephane/libmodbus/blob/master/src/modbus-rtu.c",
+      "observed": "2026-10-17T06:25:16.017Z"
+    }
+  ],
+  "queries": [
+    {
+      "query": "VCD waveform",
+      "url": "https://github.com/search?q=VCD+waveform&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:55.959Z"
+    },
+    {
+      "query": "mesh analysis",
+      "url": "https://github.com/search?q=mesh%20analysis&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:56.979Z"
+    },
+    {
+      "query": "modbus",
+      "url": "https://github.com/search?q=modbus&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:57.966Z"
+    },
+    {
+      "query": "cue splitter",
+      "url": "https://github.com/search?q=cue%20splitter&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:58.843Z"
+    },
+    {
+      "query": "PGN parser",
+      "url": "https://github.com/search?q=PGN%20parser&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:59.739Z"
+    },
+    {
+      "query": "3D data processing",
+      "url": "https://github.com/search?q=3D+data+processing&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:25:19.570Z"
+    },
+    {
+      "query": "modbus library",
+      "url": "https://github.com/search?q=modbus+library&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:26:25.149Z"
+    },
+    {
+      "query": "audio CD image",
+      "url": "https://github.com/search?q=audio+CD+image&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:26:31.848Z"
+    }
+  ]
+}
